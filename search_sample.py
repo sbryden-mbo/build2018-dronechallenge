@@ -72,6 +72,9 @@ def CropImages():
     @param image_path: The path to the image to edit
     @param saved_location:yy Path to save the cropped image
     """
+
+    print("Cropping images")
+
     width=800
     height=800
 
@@ -97,15 +100,15 @@ def CropImages():
             continue
 
 if __name__ == '__main__':
-    #animals = [(19.8, -11, "AlpacaPink"), (5.42, -3.7, "AlpacaTeal"), (-12.18, -13.56, "AlpacaRainbow"), (19.6, 9.6, "BlackSheep"), (-1.9, -0.9, "Bunny"), (3.5, 9.4, "Chick"), (-13.2, -0.25, "Chipmunk"), (-6.55, 12.25, "Hippo")]
-    animals = [(19.8, -11, "AlpacaPink")]
+    animals = [(5.42, -3.7, "AlpacaTeal"), (-12.18, -13.56, "AlpacaRainbow"), (19.6, 9.6, "BlackSheep"), (-1.9, -0.9, "Bunny"), (3.5, 9.4, "Chick"), (-13.2, -0.25, "Chipmunk"), (-6.55, 12.25, "Hippo")]
+    #animals = [(19.8, -11, "AlpacaPink")]
 
     # let's find the animals and take some photos
     for pos in animals:
         print(pos[2])
-        OrbitAnimal(pos[0], pos[1], 2, 0.4, 1, -20, pos[2])
-        OrbitAnimal(pos[0], pos[1], 1, 0.4, 1, -15, pos[2])
-        OrbitAnimal(pos[0], pos[1], 2, 0.4, 1, -40, pos[2])
+        OrbitAnimal(pos[0], pos[1], 3, 0.4, 1, -20, pos[2])
+        OrbitAnimal(pos[0], pos[1], 2, 0.5, 1, -30, pos[2])
+        #OrbitAnimal(pos[0], pos[1], 2, 0.4, 1, -40, pos[2])
 
     # crop 800 x 800 from the center of the image
     CropImages()
